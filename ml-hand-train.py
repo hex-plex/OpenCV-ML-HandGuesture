@@ -12,7 +12,7 @@ model=keras.Sequential([
 	keras.layers.Flatten(),
 	keras.layers.Dense(4,activation='softmax')
 	])
-model.compile(optimizer="adam",loss="sparse_categorical_crossentropy",metrics=["accuracy"])
+model.compile(optimizer="adam",loss="categorical_crossentropy",metrics=["accuracy"])
 
 pred=[[1,0,0,0]]*500+[[0,1,0,0]]*500+[[0,0,1,0]]*500+[[0,0,0,1]]*500
 pred=np.array(pred)
